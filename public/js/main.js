@@ -3,7 +3,6 @@
             $('#intro_ani01').animate({
                     opacity: '1',
             });
-            var pos = $(window).scrollTop();
             var timeout;
             $('body').on('mousewheel', function(e){
                 var scrollValue = $(window).scrollTop();
