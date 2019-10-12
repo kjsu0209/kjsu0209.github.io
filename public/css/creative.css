@@ -71,7 +71,33 @@ nav{
     transition: all ease 1s;
     opacity: 0;
 }
-
+/* 1.5 - question */
+#question > .main_left{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    background-color: #37a5ff;
+}
+#question > .main_right{
+    transition: all ease 1s;
+    font-family: 'Raleway', sans-serif;
+    color: #27c449;
+}
+#question > .main_right > h1{
+    font-size: 5vh;
+    line-height: 10vh;
+    margin-top: 10vh;
+    padding: 3rem;
+    transition: all ease 1s;
+    opacity: 0;
+}
+.QBubble{
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    padding: 2rem;
+}
 /* 2 - education */
 #edu > .main_left{
     background-color: #ffd519;

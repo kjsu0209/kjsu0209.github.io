@@ -10,8 +10,14 @@
                     timeout = setTimeout(function() {
                 if(e.originalEvent.wheelDelta > 0) {
                         var obj = "intro";
-                    if(scrollValue >= $("#edu").offset().top-100 && scrollValue < $("#job").offset().top-100){
+                    if(scrollValue >= $("#question").offset().top-100 && scrollValue < $("#edu").offset().top-100){
                         obj = "intro";
+                    }
+                    else if(scrollValue >= $("#edu").offset().top-100 && scrollValue < $("#job").offset().top-100){
+                        obj = "question";
+                        $('#intro_ani02').animate({
+                            opacity: '1',
+                        });
                     }
                     else if(scrollValue >= $("#job").offset().top-100){
                         obj = "edu";
@@ -23,9 +29,14 @@
                     
                 }
                 else {
-
                         var obj = "intro";
-                        if(scrollValue >= $("#intro").offset().top && scrollValue < $("#edu").offset().top-100){
+                        if(scrollValue >= $("#intro").offset().top && scrollValue < $("#question").offset().top-100){
+                            obj = "question";
+                            $('#intro_ani02').animate({
+                                opacity: '1',
+                            });
+                        }
+                        else if(scrollValue >= $("#question").offset().top && scrollValue < $("#edu").offset().top-100){
                             obj = "edu";
                         }
                         else if(scrollValue >= $("#edu").offset().top-100 && scrollValue < $("#job").offset().top){
@@ -40,9 +51,6 @@
             }, 100);
 
             });
-            
-                
-            
         })
 
         function openCard(no, width){
