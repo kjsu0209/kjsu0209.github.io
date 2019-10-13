@@ -27,7 +27,8 @@ nav{
 .info{
     position: fixed;
     text-align: center;
-    margin-left: 4%;
+    left: 4%;
+    z-index: 0;
 }
 .theme_btn{
     font-size: 1rem;
@@ -91,12 +92,45 @@ nav{
     transition: all ease 1s;
     opacity: 0;
 }
+#question > .main_right > h2{
+    font-size: 4vh;
+    padding: 3rem;
+    transition: all ease 1s;
+}
 .QBubble{
+    z-index: 100;
+    position: relative;
+    transition: all ease 1s;
     border: 2px solid white;
     border-radius: 50%;
     width: 170px;
     height: 170px;
     padding: 2rem;
+    margin: 1rem;
+    text-align :center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.QBubble > i{
+    position: relative;
+    z-index: 200;
+    font-size: 1rem;
+}
+.QBubble > i:hover{
+    text-decoration: underline;;
+}
+.QBubble:hover{
+    width: 200px;
+    height: 200px;
+}
+#Q1{
+    margin-left: 4rem;
+}
+#Q2{
+    float: right;
+}
+#Q3{
+    margin-top: 10rem;
 }
 /* 2 - education */
 #edu > .main_left{
