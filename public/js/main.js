@@ -19,8 +19,11 @@
                             opacity: '1',
                         });
                     }
-                    else if(scrollValue >= $("#job").offset().top-100){
+                    else if(scrollValue >= $("#job").offset().top-100 && scrollValue < $("#project").offset().top-100){
                         obj = "edu";
+                    }
+                    else if(scrollValue >= $("#project").offset().top-100){
+                        obj = "job";
                     }
                     //console.log("up: " +scrollValue + ", " + obj);
 
@@ -41,6 +44,9 @@
                         }
                         else if(scrollValue >= $("#edu").offset().top-100 && scrollValue < $("#job").offset().top){
                             obj = "job";
+                        }
+                        else if(scrollValue >= $("#job").offset().top-100 && scrollValue < $("#project").offset().top){
+                            obj = "project";
                         }
                         //console.log("down: " +scrollValue + ", " + obj);
 
@@ -151,4 +157,44 @@
                     c.setAttribute("onclick", "HideAnswer(`Q3`)");
                     break;
             }
+        }
+
+        function clickImg(pr){
+            var p = document.getElementById(pr);
+
+            var topImg = document.getElementById("pr_top_img");
+            var info = document.getElementById("thumb_info");
+            if(pr == "pr1"){
+                topImg.setAttribute("src", "./public/img/pr1-3.PNG");
+                p.style.border = "3px solid #69dd73";
+                // p.style.opacity = "0.5";
+                p.innerHTML = "<p><br>GIF2018</p>"
+                info.innerHTML = "2018.11<br>Attend Global Innovator Festa 2018 held on Daegu, Korea<br>Kindergarten commute security system with Arduino & Web application<br>We won a 3rd prize in makerthon(hackathon) :)"
+                GoBackThumb("pr2");
+                GoBackThumb("pr3");
+            }
+            else if(pr == "pr2"){
+                topImg.setAttribute("src", "./public/img/pr2.PNG");
+                p.style.border = "3px solid #69dd73";
+                //p.style.opacity = "0.5";
+                p.innerHTML = "<p><br>LikeLion</p>";
+                info.innerHTML = "2018.03 ~ 2019.07<br>Joined a programming education society 'Likelion'.<br>Studied web programming based on Ruby on Rails in 2018.<br>In 2019, I got an opportunity to teach Django.";
+                GoBackThumb("pr1");
+                GoBackThumb("pr3");
+            }else if(pr == "pr3"){
+                topImg.setAttribute("src", "./public/img/pr3.PNG");
+                p.style.border = "3px solid #69dd73";
+                //p.style.opacity = "0.5";
+                p.innerHTML = "<p><br>Earthquake Idea Contest</p>";
+                info.innerHTML = "2019.08<br>Attend Idea Contest for Earthquake Emergency.<br>";
+                GoBackThumb("pr1");
+                GoBackThumb("pr2");
+            }
+        }
+
+        function GoBackThumb(pr){
+            var pr = document.getElementById(pr);
+            pr.style.border = "3px solid lightgray";
+            pr.style.opacity = "1";
+            pr.innerHTML = "";
         }

@@ -240,3 +240,78 @@ nav{
     text-align: left;
     width: 100%;
 }
+
+/* 4 - project */
+#project > .main_left{
+    text-align: center;
+    background-color: #69dd73;
+}
+#project > .main_left > h1{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 7vh;
+    margin-top: 7vh;
+}
+#project > .main_right{
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+}
+#pr_top{
+    height: 50vh;
+    overflow: hidden;
+}
+#pr_top img{
+    width: 100%;
+}
+#pr_bottom{
+    height: 50vh;
+}
+.thumb_group{
+    display: inline-flex;
+}
+.thumb{
+    overflow: hidden;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    margin: 1rem;
+    background-color: lightgray;
+    text-align: center;
+    cursor: pointer;
+    border: 3px solid lightgray;
+    opacity: 1;
+    transition: all ease 0.5s;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.thumb img{
+    height: 130px;
+}
+#thumb_info{
+    margin: 1rem;
+    padding: 1rem;
+    border-top: 1px solid lightgray;
+}
+#pr1{
+    background-image : url("../img/pr1-3.PNG");
+    background-size: cover;
+}
+#pr2{
+    background-image : url("../img/pr2.PNG");
+    background-size: cover; 
+}
+#pr3{
+    background-image : url("../img/pr3.PNG");
+    background-size: cover; 
+}
+
+#timer{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 10vh;
+    right: 20px;
+    text-align: center;
+    cursor: pointer;
+}
